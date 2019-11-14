@@ -1,0 +1,7 @@
+desc: Product
+log:
+  level: warn
+  file: app.log
+server:
+  port: 80
+  ip: 0.0.0.0

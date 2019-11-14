@@ -1,0 +1,28 @@
+{{!-- 页面头部
+title: 标题
+showSearch: 是否显示搜索图标
+searchHandler: 定义弹出查询窗口的函数句柄 
+当需要搜索时，需要在主模板文件中定义相应的搜索界面
+--}}
+<v-toolbar app fixed color="primary">
+  <v-toolbar-title >{{title}}</v-toolbar-title>
+
+  <v-spacer></v-spacer>
+
+  <v-btn icon v-bind="{{showSearch}}" @click.native="{{searchHandler}}" >
+    <v-icon>search</v-icon>
+  </v-btn>
+
+  <v-btn icon href="/m">
+    <v-icon>send</v-icon>
+  </v-btn>
+
+  <v-btn icon href="/m/his">
+    <v-icon>history</v-icon>
+  </v-btn>
+
+  <v-btn icon href="/">
+    <v-icon>computer</v-icon>
+  </v-btn>
+</v-toolbar>
+

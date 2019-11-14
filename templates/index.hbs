@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <!-- <base href=""> -->
+  <script src="https://unpkg.com/lodash@4.17.11/lodash.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+
+  {{!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script> --}}
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+  <link rel="stylesheet" href="/static/css/style.m.css" type="text/css">
+</head>
+<body>
+  <h1>首页</h1>
+  <div>
+    {{sessionId}}
+    <br>
+  {{content}}
+  </div>
+  <div>
+    <script type="text/javascript">
+      var cookie = document.cookie;
+      var arr = cookie.split(';');
+      var logined = false, uname;
+      for(var i=0;i<arr.length;i++){
+        kv = arr[i].trim().split('=');
+        if (kv[0] == 'uid'){
+          logined = true;
+        }else if(kv[0] == 'uname'){
+          uname = kv[1]
+        }
+      }
+      if(logined){
+        document.write(`欢迎 ${uname}.`)
+        document.write(`<a href="/auth/logout">登出</a>`)
+      }else{
+        document.write(`<a href="/auth">登录</a>`)
+      }
+
+    </script>
+    
+  </div>
+</body>
+</html>

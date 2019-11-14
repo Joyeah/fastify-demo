@@ -1,0 +1,44 @@
+<html>
+<head>
+  {{>resource.bv title="Login"}}
+</head>
+
+<body ><!--id=app不能放到body上，否则vue不渲染-->
+<h2>浏览器报错：form is not define</h2>
+  <div id="app">
+    <v-card title="登录" header="featured" header-tag="header" footer="Card Footer" footer-tag="footer" title="Title">
+      <b-card-text>
+        With supporting text below as a natural lead-in to additional content.
+      </b-card-text>
+      <b-form @submit.stop.prevent>
+        <b-form-input id="input-1" v-model="form.email" type="email" required placeholder="Enter email"></b-form-input>
+        <b-form-input type="password" id="text-password" aria-describedby="password-help-block"></b-form-input>
+    
+        <b-button type="submit" variant="primary">Submit</b-button>
+        <b-button type="reset" variant="danger">Reset</b-button>
+      </b-form>
+    </v-card>
+  </div>
+</body>
+
+</html>
+
+<script>
+  var vue = new Vue({
+    el: '#app',
+    data: {
+      valid: true,
+      loginForm: {
+        username: "liu",
+        password: '1234'
+      },
+    },
+
+    methods: {
+      login() {
+        
+      }
+    }
+  })
+  
+</script>

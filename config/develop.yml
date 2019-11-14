@@ -1,0 +1,4 @@
+desc: Development
+log:
+  level: info
+  file: app.log
