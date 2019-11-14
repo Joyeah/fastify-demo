@@ -4,8 +4,9 @@
 # Dependence
 
 
-# verison 
-
-# next version
-1. add Notifier.js to web page
+# todo
+1. auth & session
+2. some common action
+2. add Notifier.js to web page
    https://codepen.io/mlms13/pen/mGqxt
+
