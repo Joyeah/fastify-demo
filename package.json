@@ -24,7 +24,7 @@
     "fastify-jwt": "^1.0.0",
     "fastify-session": "^3.0.0",
     "fastify-static": "^2.4.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "jayson": "^3.0.2",
     "js-yaml": "^3.13.1",
     "node-notifier": "^5.4.0",
